@@ -1,0 +1,9 @@
+*/.env
+.env
+*/build
+compiled
+*/compiled
+*/node_modules
+node_modules
+server/public
+db_dump*.sql

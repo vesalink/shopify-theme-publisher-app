@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  your-container-name:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: xxxxxxxx.dkr.ecr.us-west-2.amazonaws.com/xxxxxxx:latest
+    container_name: shopify-mb-app
+    environment:
+      - NODE_ENV=production
+      - SHOPIFY_API_KEY=*****
+      - SHOPIFY_API_SECRET=*****
+      - DB_USER=*****
+      - DB_PASSWORD=*****
+      - DB_HOST=*****
+      - DB_DATABASE=*****
+      - DB_PORT=3306
+      - SESSION_SECRET=FF161541D52D89793A72A8ABC3749
+      - GENERATE_SOURCEMAP=false
+    ports:
+      - 80:3001
+    mem_limit: 3879731200
+    cpu_shares: 2000
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: awsloggroupxxxxx
+        awslogs-region: "us-west-2"
+        awslogs-stream-prefix: "xxxxxx"

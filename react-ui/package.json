@@ -1,0 +1,44 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@shopify/polaris": "v2.2.0",
+    "axios": "^0.19.0",
+    "ejs": "^2.6.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.0",
+    "npm": "^6.10.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-block-ui": "^1.1.2",
+    "react-country-select": "git+ssh://git@gitlab.com/mapleapps-shopify/react-country-select.git",
+    "react-dom": "^16.4.1",
+    "react-font-picker": "git+ssh://git@gitlab.com/mapleapps-shopify/react-font-picker.git",
+    "react-image-picker": "git+ssh://git@gitlab.com/mapleapps-shopify/react-image-picker.git",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.0.13",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "url-search-params": "^0.9.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/": {
+      "target": "http://localhost:3001"
+    }
+  },
+  "devDependencies": {
+    "enzyme": "^2.9.1",
+    "react-test-renderer": "^15.6.1",
+    "eslint-plugin-flowtype-errors": "^4.1.0"
+  }
+}

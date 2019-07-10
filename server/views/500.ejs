@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98324005-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-98324005-1');
+  </script>
+
+  <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/2.5.0/polaris.min.css" />
+  <title>We're sorry, but something went wrong.</title>
+</head>
+
+<body>
+
+  <div class="Polaris-Page">
+    <div class="Polaris-Page__Header Polaris-Page__Header--hasPagination Polaris-Page__Header--hasBreadcrumbs Polaris-Page__Header--hasRollup Polaris-Page__Header--hasSecondaryActions">
+      <div class="Polaris-Page__Title">
+        <h1 class="Polaris-DisplayText Polaris-DisplayText--sizeLarge">Error occurred</h1>
+      </div>
+    </div>
+    <div class="Polaris-Page__Content">
+      <div class="Polaris-Card">
+        <div class="Polaris-Card__Header">
+          <h2 class="Polaris-Heading"></h2>
+        </div>
+        <div class="Polaris-Card__Section">
+          <div class="Polaris-Banner Polaris-Banner--statusCritical Polaris-Banner--withinPage" tabindex="0" role="alert" aria-live="polite"
+            aria-labelledby="Banner10Heading" aria-describedby="Banner10Content">
+            <div class="Polaris-Banner__Ribbon">
+              <span class="Polaris-Icon Polaris-Icon--colorRedDark Polaris-Icon--isColored Polaris-Icon--hasBackdrop">
+                <svg class="Polaris-Icon__Svg" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                  <g fill-rule="evenodd">
+                    <circle fill="currentColor" cx="10" cy="10" r="9"></circle>
+                    <path d="M2 10c0-1.846.635-3.543 1.688-4.897l11.209 11.209A7.954 7.954 0 0 1 10 18c-4.411 0-8-3.589-8-8m14.312 4.897L5.103 3.688A7.954 7.954 0 0 1 10 2c4.411 0 8 3.589 8 8a7.952 7.952 0 0 1-1.688 4.897M0 10c0 5.514 4.486 10 10 10s10-4.486 10-10S15.514 0 10 0 0 4.486 0 10"></path>
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <div>
+              <div class="Polaris-Banner__Heading" id="Banner10Heading">
+                <p class="Polaris-Heading">We're sorry, but something went wrong.</p>
+              </div>
+              <div class="Polaris-Banner__Content" id="Banner10Content">
+                <p>Please try accessing the app again. If the problem persists, contact our customer support.
+                  <a class="Polaris-Link" href="<%= APP_URL %>">Return to app home</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
