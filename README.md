@@ -2,7 +2,7 @@
 # Shopify Theme Publisher
 
 
-Shopify Application written with React, Polaris, Express, and Mysql which is basically list all your store themes with ability to make one LIVE in one click.
+Shopify Application written with React, Redux, Polaris, Express, and Mysql which is basically list all your store themes with ability to make one LIVE in one click.
 
 ## Description
 
