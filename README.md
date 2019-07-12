@@ -172,6 +172,7 @@ If you don't have one already, create a development store. Open [Shopify's docum
  2. Create ECR repository
  3. When Cluster is created, new EC2 instance / Load Balancer / Target group will be automatically created and assign to your Cluster. Go to EC2 Target group and copy its ARN, you will need it in command below
  4. Install AWS CLI
+ 5. Probably you want to change ecs-params.yml depends on which EC2 configuration you chose.
 
 ```sh
 aws ecr get-login --no-include-email --region your-region
@@ -190,9 +191,12 @@ ecs-cli compose --file ./docker-compose.yml --ecs-params ./ecs-params.yml servic
 --container-port 3001
 ```
 
-## AWS Pipeline (automatic deploy by github commit webhook)
+## AWS CodePipeline (automatic deploy by github commit webhook)
 
-To be continued....
+ 1. Go to AWS CodePipeline service - Create pipeline (enter pipeline name, the rest by default).
+ 2. Add Source stage by choosing Action provider as Github (OAuth) and select a repo and branch, depending on what environment (develop/master/stage) you are setting up.
+ 3. Add Build stage by choosing Action provider as CodeBuild and then click Create Project. Here is almost all by default, just in Buildspec - choose Use buildspec file, which is exist in current repo and use S3 for artifacts.
+ 4. Add Staging by choosing Action provider as Amazon ECS and then your created Cluster and service name, image definitions file by default.
 
 
 ## Testing

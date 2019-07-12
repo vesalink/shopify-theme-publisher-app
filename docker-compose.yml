@@ -6,7 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile
     image: xxxxxxxx.dkr.ecr.us-west-2.amazonaws.com/xxxxxxx:latest
-    container_name: shopify-mb-app
     environment:
       - NODE_ENV=production
       - SHOPIFY_API_KEY=*****
